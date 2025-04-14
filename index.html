@@ -7,12 +7,14 @@
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -155,6 +157,38 @@
     <a href="#demo" class="btn btn-lg btn-primary mt-3">Comece Agora</a>
   </section>
 
+  <section id="grafico" class="py-5" style="background: #f8f9fa;">
+    <div class="container">
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body">
+          <h2 class="text-center mb-3 text-primary">O Impacto da Fidelização nas Vendas</h2>
+          <p class="text-center text-muted mb-4">
+            Acompanhe o crescimento exponencial nas vendas quando o cliente se torna fiel à sua marca.
+          </p>
+  
+          <!-- Linha com os 3 gráficos -->
+          <div class="row justify-content-center">
+            <!-- Gráfico de Barras -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+              <canvas id="salesChart" style="max-width: 100%; height: 400px;"></canvas>
+            </div>
+  
+            <!-- Gráfico de Barras Horizontal -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+              <canvas id="fidelizacaoChart" style="max-width: 100%; height: 400px;"></canvas>
+            </div>
+  
+            <!-- Gráfico de Pizza -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+              <canvas id="graficoPizza" style="max-width: 100%; height: 400px;"></canvas>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>  
+
   <section class="container my-5">
     <h2 class="section-title text-center mb-4">✨ Veja na Prática</h2>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -202,5 +236,176 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago'],
+        datasets: [{
+          label: 'Sem Fidelização',
+          data: [100, 120, 130, 135, 140, 145, 150, 155],
+          borderColor: 'rgba(220, 53, 69, 1)',
+          backgroundColor: 'rgba(220, 53, 69, 0.1)',
+          fill: true,
+          tension: 0.4
+        },
+        {
+          label: 'Com Fidelização',
+          data: [100, 130, 170, 210, 260, 320, 400, 500],
+          borderColor: 'rgba(13, 110, 253, 1)',
+          backgroundColor: 'rgba(13, 110, 253, 0.1)',
+          fill: true,
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          },
+          title: {
+            display: true,
+            text: 'Clientes Fidelizados vs Não Fidelizados',
+            color: '#212529',
+            font: {
+              size: 18
+            }
+          },
+          tooltip: {
+            backgroundColor: '#fff',
+            titleColor: '#000',
+            bodyColor: '#000',
+            borderColor: '#ccc',
+            borderWidth: 1
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: '#6c757d'
+            },
+            grid: {
+              color: '#e9ecef'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#6c757d'
+            },
+            grid: {
+              color: '#e9ecef'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+<script>
+  // Dados fictícios de vendas após fidelização (substitua pelos seus)
+  const dadosFidelizados = {
+    labels: ['João', 'Maria', 'Carlos', 'Ana'],
+    valores: [450, 320, 600, 280] // valores em R$
+  };
+
+  const ctxPizza = document.getElementById('graficoPizza').getContext('2d');
+  const graficoPizza = new Chart(ctxPizza, {
+    type: 'pie',
+    data: {
+      labels: dadosFidelizados.labels,
+      datasets: [{
+        label: 'Vendas Pós-Fidelização (R$)',
+        data: dadosFidelizados.valores,
+        backgroundColor: ['#4CAF50', '#FF9800', '#2196F3', '#E91E63'],
+        borderColor: '#fff',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: 'Vendas em R$ após Fidelização por Cliente',
+          color: '#212529',
+          font: {
+            size: 18
+          }
+        },
+        legend: {
+          position: 'bottom'
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              const valor = context.parsed;
+              return `R$ ${valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+<script>
+  const ctxFidelizacao = document.getElementById('fidelizacaoChart').getContext('2d');
+
+  const dadosMensais = {
+    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
+    valores: [1200, 950, 1450, 1100] // Vendas fidelizadas em R$
+  };
+
+  new Chart(ctxFidelizacao, {
+    type: 'bar',
+    data: {
+      labels: dadosMensais.labels,
+      datasets: [{
+        label: 'Vendas Fidelizadas (R$)',
+        data: dadosMensais.valores,
+        backgroundColor: 'rgba(75, 192, 192, 0.7)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    },
+    options: {
+      indexAxis: 'y', // isso faz o gráfico ser horizontal
+      scales: {
+        x: {
+          beginAtZero: true,
+          ticks: {
+            callback: function(value) {
+              return `R$ ${value.toLocaleString('pt-BR')}`;
+            }
+          }
+        }
+      },
+      plugins: {
+        title: {
+          display: true,
+          text: 'Vendas Fidelizadas por Mês',
+          color: '#212529',
+          font: { size: 18 }
+        },
+        legend: {
+          display: false
+        },
+        tooltip: {
+          callbacks: {
+            label: function(context) {
+              return `R$ ${context.parsed.x.toLocaleString('pt-BR')}`;
+            }
+          }
+        }
+      }
+    }
+  });
+</script>
+
+
+
 </body>
 </html>
