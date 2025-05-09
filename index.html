@@ -1,414 +1,455 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fidelity Store</title>
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9S73P8C8QJ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fidelity Store</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    gtag('config', 'G-9S73P8C8QJ');
-  </script>
-  
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-    }
-    header {
-      background: linear-gradient(90deg, #6a1b9a, #8e24aa);
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    header img {
-      max-width: 140px;
-      background-color: white;
-      padding: 5px;
-      border-radius: 10px;
-    }
-    .section-title {
-      color: #6a1b9a;
-      font-weight: bold;
-    }
-    .highlight {
-      color: #8e24aa;
-      font-weight: 600;
-    }
-    .btn-primary {
-      background-color: #8e24aa;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #6a1b9a;
-    }
-    .btn-success {
-      background-color: #25D366;
-      border: none;
-    }
-    .btn-success:hover {
-      background-color: #1ebe5d;
-    }
-    .demo-section {
-      background-color: #f1e4fa;
-      padding: 60px 20px;
-      border-top: 3px solid #8e24aa;
-      border-bottom: 3px solid #8e24aa;
-    }
-    #carouselExampleIndicators {
-      width: 350px;
-      height: 350px;
-      margin: 0 auto;
-    }
-    .carousel-inner img {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-      margin: 0 auto;
-    }
-    .carousel-item {
-      text-align: center;
-    }
-    .carousel-item img {
-      max-width: 100%;
-      height: auto;
-      margin: 0 auto;
-    }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
 
-  <header>
-    <img src="img/logo-fidelity.jpg" alt="Fidelity Store Logo">
-    <h1 class="mt-3">💥 Transforme Vendas em Fidelidade!</h1>
-    <p class="lead">A ferramenta que vai revolucionar o relacionamento com seus clientes e turbinar o crescimento da sua loja.</p>
-    <a href="#demo" class="btn btn-lg btn-primary mt-3">Quero Conhecer o Sistema</a>
-  </header>
-
-  <section class="container my-5">
-    <p class="lead text-center">
-      Imagine um sistema inteligente que transforma cada compra em uma oportunidade de fidelização. Agora pare de imaginar e conheça o sistema definitivo de fidelização de clientes, criado para fazer sua loja crescer como nunca antes.
-    </p>
-  </section>
-
-  <section class="container my-5">
-    <div class="text-center mb-4">
-      <h2 class="section-title">✅ COMO FUNCIONA?</h2>
-      <p class="lead">Simples. E poderoso.</p>
-    </div>
-    <p class="text-center">
-      Seus clientes acumulam pontos a cada compra realizada acima de um determinado valor e trocam esses pontos por produtos disponíveis — direto pelo sistema. Uma experiência que encanta, fideliza e traz o cliente de volta para comprar mais.
-    </p>
-  </section>
-
-  <section class="container my-5">
-    <div class="text-center mb-4">
-      <h2 class="section-title">🧠 E PARA VOCÊ, LOJISTA?</h2>
-      <p class="lead">Você terá nas mãos uma plataforma administrativa completa, com todos os recursos que você precisa para dominar o seu mercado:</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">📊 Lançamento de Pontos em Compras</li>
-      <li class="list-group-item">👥 Cadastro e Gerenciamento Total dos Clientes</li>
-      <li class="list-group-item">🔍 Relatórios e Gráficos Poderosos com insights estratégicos</li>
-      <li class="list-group-item">🎯 Segmentação por Localidade, Gênero e Faixa Etária</li>
-      <li class="list-group-item">🎁 Listas Inteligentes para E-mails Personalizados ou Automáticos</li>
-      <li class="list-group-item">🎉 Envio de Mensagens para Aniversariantes Diários</li>
-      <li class="list-group-item">📬 Base de Dados de Leads em Crescimento Contínuo</li>
-    </ul>
-  </section>
-
-  <section class="container my-5">
-    <div class="text-center mb-4">
-      <h2 class="section-title">🔗 Integrações e Suporte Técnico</h2>
-      <p class="lead">Totalmente preparado para evoluir junto com a sua loja.</p>
-    </div>
-    <p class="text-center">
-      O Fidelity Store é 100% online e pronto para integração com os sistemas que você já usa. 
-      Nossa equipe técnica está sempre disponível para auxiliar em qualquer necessidade, garantindo que 
-      sua loja funcione com o máximo desempenho e eficiência. 
-    </p>
-  </section>
-
-  <section class="container my-5 text-center">
-    <p class="lead">
-      Você nunca mais vai ver seus clientes como números.<br>
-      Você verá pessoas, padrões, comportamentos — e saberá exatamente como agir para aumentar suas vendas e encantar cada vez mais.
-    </p>
-  </section>
-
-  <section class="container my-5 text-center">
-    <h2 class="section-title">🚀 Sua Loja em Outro Nível</h2>
-    <p class="lead">
-      Esse não é apenas um sistema.<br>
-      É a oportunidade que faltava para você transformar sua base de clientes em uma comunidade fiel, ativa e engajada.<br>
-      Enquanto outros ainda pensam em como crescer, você já estará na frente — com dados, estratégias, e resultados reais.
-    </p>
-    <h3 class="mt-4">📈 Fidelize mais. Venda mais. Cresça mais.</h3>
-    <a href="#demo" class="btn btn-lg btn-primary mt-3">Comece Agora</a>
-  </section>
-
-  <section id="grafico" class="py-5" style="background: #f8f9fa;">
-    <div class="container">
-      <div class="card shadow-lg border-0 rounded-4">
-        <div class="card-body">
-          <h2 class="text-center mb-3 text-primary">O Impacto da Fidelização nas Vendas</h2>
-          <p class="text-center text-muted mb-4">
-            Acompanhe o crescimento exponencial nas vendas quando o cliente se torna fiel à sua marca.
-          </p>
-  
-          <!-- Linha com os 3 gráficos -->
-          <div class="row justify-content-center">
-            <!-- Gráfico de Barras -->
-            <div class="col-md-4 mb-4 d-flex justify-content-center">
-              <canvas id="salesChart" style="max-width: 100%; height: 400px;"></canvas>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="img/logo-fidelity.jpg" alt="Logo Fidelity Store" width="80" height="80">
+                <h1 class="logo-nome">Fidelity Store</h1>
             </div>
-  
-            <!-- Gráfico de Barras Horizontal -->
-            <div class="col-md-4 mb-4 d-flex justify-content-center">
-              <canvas id="fidelizacaoChart" style="max-width: 100%; height: 400px;"></canvas>
-            </div>
-  
-            <!-- Gráfico de Pizza -->
-            <div class="col-md-4 mb-4 d-flex justify-content-center">
-              <canvas id="graficoPizza" style="max-width: 100%; height: 400px;"></canvas>
-            </div>
-          </div>
-  
-        </div>
-      </div>
-    </div>
-  </section>  
+            <nav>
+                <ul>
+                    <li><a href="#a-plataforma">A Plataforma</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#fale-conosco">Fale Conosco</a></li>
+                    <li><a href="#politica-privacidade">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <section class="container my-5">
-    <h2 class="section-title text-center mb-4">✨ Veja na Prática</h2>
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/depoimentos/carrossel1.png" class="d-block" alt="Tela 1">
-        </div>
-        <div class="carousel-item">
-          <img src="img/depoimentos/carrossel2.png" class="d-block" alt="Tela 2">
-        </div>
-        <div class="carousel-item">
-          <img src="img/depoimentos/carrossel3.png" class="d-block" alt="Tela 3">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Próximo</span>
-      </button>
-    </div>
-  </section>
+        <main>
+            <section id="index">
+                <h1>💥 Transforme Vendas em Fidelidade!</h1>
+                <p>A ferramenta que vai revolucionar o relacionamento com seus clientes e turbinar o crescimento da sua loja.</p>
+                <p>Imagine um sistema inteligente que transforma cada compra em uma oportunidade de fidelização. Agora pare de imaginar e conheça o sistema definitivo de fidelização de clientes, criado para fazer sua loja crescer como nunca antes.</p>    
+            </section>
 
-  <section class="container my-5">
-    <h2 class="section-title text-center mb-4">📺 Assista ao Vídeo de Demonstração</h2>
-    <div class="ratio ratio-16x9">
-      <iframe src="https://www.youtube.com/embed/804h1JLD7MU" title="Demonstração Fidelity Store" allowfullscreen></iframe>
-    </div>
-  </section>
+            <section class="container my-5" id="a-plataforma">
+                <div class="text-center mb-4"></div>
+                    <h2 class="section-title">✅ COMO FUNCIONA?</h2>
+                    <p class="lead">Simples. E poderoso.</p>
+                </div>
+                <p class="text-center">Seus clientes acumulam pontos a cada compra realizada acima de um determinado valor e trocam esses pontos por produtos disponíveis — direto pelo sistema. Uma experiência que encanta, fideliza e traz o cliente de volta para comprar mais.</p>
+                <!-- <div class="graficos">
+                    <canvas id="grafico1"></canvas>
+                    <canvas id="grafico2"></canvas>
+                </div> -->
+            </section>
 
-  <section id="demo" class="demo-section text-center">
-    <div class="container">
-      <h2 class="section-title mb-4">📞 Fale com a Gente!</h2>
-      <p class="lead mb-4">Entre em contato agora mesmo e descubra como o Fidelity Store pode transformar sua loja.</p>
-      <a href="https://wa.me/5521987870918" class="btn btn-success btn-lg" target="_blank">
-        💬 Falar no WhatsApp
-      </a>
-    </div>
-  </section>
+            <section class="container my-5">
+                <div class="text-center mb-4">
+                    <h2 class="section-title">🧠 E PARA VOCÊ, LOJISTA?</h2>
+                    <p class="lead">Você terá nas mãos uma plataforma administrativa completa, com todos os recursos que você precisa para dominar o seu mercado:</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">📊 Lançamento de Pontos em Compras</li>
+                    <li class="list-group-item">👥 Cadastro e Gerenciamento Total dos Clientes</li>
+                    <li class="list-group-item">🔍 Relatórios e Gráficos Poderosos com insights estratégicos</li>
+                    <li class="list-group-item">🎯 Segmentação por Localidade, Gênero e Faixa Etária</li>
+                    <li class="list-group-item">🎁 Listas Inteligentes para E-mails Personalizados ou Automáticos</li>
+                    <li class="list-group-item">🎉 Envio de Mensagens para Aniversariantes Diários</li>
+                    <li class="list-group-item">📬 Base de Dados de Leads em Crescimento Contínuo</li>
+                </ul>
+            </section>
 
-  <footer class="text-center text-muted py-4">
-    &copy; 2025 Fidelity Store. Todos os direitos reservados.
-  </footer>
+            <section class="container my-5">
+                <div class="text-center mb-4">
+                    <h2 class="section-title">🔗 Integrações e Suporte Técnico</h2>
+                    <p class="lead">Totalmente preparado para evoluir junto com a sua loja.</p>
+                </div>
+                <p class="text-center">
+                    O Fidelity Store é 100% online e pronto para integração com os sistemas que você já usa. 
+                    Nossa equipe técnica está sempre disponível para auxiliar em qualquer necessidade, garantindo que 
+                    sua loja funcione com o máximo desempenho e eficiência. 
+                </p>
+            </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const ctx = document.getElementById('salesChart').getContext('2d');
-    const salesChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago'],
-        datasets: [{
-          label: 'Sem Fidelização',
-          data: [100, 120, 130, 135, 140, 145, 150, 155],
-          borderColor: 'rgba(220, 53, 69, 1)',
-          backgroundColor: 'rgba(220, 53, 69, 0.1)',
-          fill: true,
-          tension: 0.4
-        },
-        {
-          label: 'Com Fidelização',
-          data: [100, 130, 170, 210, 260, 320, 400, 500],
-          borderColor: 'rgba(13, 110, 253, 1)',
-          backgroundColor: 'rgba(13, 110, 253, 0.1)',
-          fill: true,
-          tension: 0.4
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: 'bottom'
-          },
-          title: {
-            display: true,
-            text: 'Clientes Fidelizados vs Não Fidelizados',
-            color: '#212529',
-            font: {
-              size: 18
-            }
-          },
-          tooltip: {
-            backgroundColor: '#fff',
-            titleColor: '#000',
-            bodyColor: '#000',
-            borderColor: '#ccc',
-            borderWidth: 1
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks: {
-              color: '#6c757d'
+            <section class="container my-5 text-center">
+                <p class="lead">
+                    Você nunca mais vai ver seus clientes como números.<br>
+                    Você verá pessoas, padrões, comportamentos — e saberá exatamente como agir para aumentar suas vendas e encantar cada vez mais.
+                </p>
+            </section>
+
+            <section class="container my-5 text-center">
+                <h2 class="section-title">🚀 Sua Loja em Outro Nível</h2>
+                <p class="lead">
+                    Esse não é apenas um sistema.<br>
+                    É a oportunidade que faltava para você transformar sua base de clientes em uma comunidade fiel, ativa e engajada.<br>
+                    Enquanto outros ainda pensam em como crescer, você já estará na frente — com dados, estratégias, e resultados reais.
+                </p>
+                <h3 class="mt-4">📈 Fidelize mais. Venda mais. Cresça mais.</h3>
+                <a href="#demo" class="btn btn-lg btn-primary mt-3">Comece Agora</a>
+            </section>
+
+            <!-- Aqui começam os gráficos -->
+            <section id="grafico" class="py-5" style="background: #f8f9fa;">
+                <div class="container">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body">
+                    <h2 class="text-center mb-3 text-primary">O Impacto da Fidelização nas Vendas</h2>
+                    <p class="text-center text-muted mb-4">
+                        Acompanhe o crescimento exponencial nas vendas quando o cliente se torna fiel à sua marca.
+                    </p>
+            
+                    <!-- Linha com os 3 gráficos -->
+                    <div class="row justify-content-center">
+                        <!-- Gráfico de Barras -->
+                        <div class="col-md-4 mb-4 d-flex justify-content-center">
+                        <canvas id="salesChart" style="max-width: 100%; height: 400px;"></canvas>
+                        </div>
+            
+                        <!-- Gráfico de Barras Horizontal -->
+                        <div class="col-md-4 mb-4 d-flex justify-content-center">
+                        <canvas id="fidelizacaoChart" style="max-width: 100%; height: 400px;"></canvas>
+                        </div>
+            
+                        <!-- Gráfico de Pizza -->
+                        <div class="col-md-4 mb-4 d-flex justify-content-center">
+                        <canvas id="graficoPizza" style="max-width: 100%; height: 400px;"></canvas>
+                        </div>
+                    </div>
+            
+                    </div>
+                </div>
+                </div>
+            </section> 
+
+            <section class="container my-5" id="depoimentos">
+                <h2 class="section-title text-center mb-4">✨ Veja na Prática</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/depoimentos/carrossel1.png" class="d-block" alt="Tela 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/depoimentos/carrossel2.png" class="d-block" alt="Tela 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/depoimentos/carrossel3.png" class="d-block" alt="Tela 3">
+                    </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="container my-5" id="demonstracao">
+                <h2 class="section-title text-center mb-4">📺 Assista ao Vídeo de Demonstração</h2>
+                <div class="video-demonstrativo">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/akMlBKOMFtM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section class="container my-5" id="planos">
+                <h2 class="section-title text-center mb-4">Nossos Planos</h2>
+                <div class="planos-container">
+                    <div class="plano">
+                        <h3>Essencial</h3>
+                        <p class="preco">R$ 87,00/mês</p>
+                        <ul>
+                            <li>Plataforma de Fidelidade</li>
+                            <li>Criação de Listas de Destinatários</li>
+                            <li>Gestão de Alertas</li>
+                            <li>Administração de Promoções</li>
+                            <li>20 Dias Grátis*</li>
+                            <li>Pesquisa de Satisfação</li>
+                        </ul>
+                        <button>Assinar</button>
+                    </div>
+                    <div class="plano mais-indicado">
+                        <h3>Master</h3>
+                        <p class="preco">R$ 107,00/mês</p>
+                        <ul>
+                            <li>Todas as funcionalidades do Plano Básico</li>
+                            <li>Suporte Técnico<sup>1</sup></li>
+                            <li>Administração de Lojas<sup>2</sup></li>
+                        </ul>
+                        <button>Assinar</button>
+                    </div>
+                    <div class="plano">
+                        <h3>Elite</h3>
+                        <p class="preco">R$ 137,00/mês</p>
+                        <ul>
+                            <li>Todas as funcionalidades do Plano Premium</li>
+                            <li>Suporte Técnico<sup>3</sup></li>
+                            <li>Administração de Lojas<sup>4</sup></li>
+                            <li>Envio de Alertas por Telegram</li>
+                        </ul>
+                        <button>Contatar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo" class="demo-section text-center">
+                <div class="container">
+                <h2 class="section-title mb-4">📞 Fale com a Gente!</h2>
+                <p class="lead mb-4">Entre em contato agora mesmo e descubra como o Fidelity Store pode transformar sua loja.</p>
+                <a href="https://wa.me/5521987870918" class="btn btn-success btn-lg" target="_blank">
+                    💬 Falar no WhatsApp
+                </a>
+                </div>
+            </section>
+
+            <section class="container my-5" id="fale-conosco">
+                <h2 class="section-title">Fale Conosco</h2>
+                <div class="form-container text-center mb-4"">
+                    <form action="#" method="POST" class="form-3d">
+                        <div class="input-wrap">
+                            <input type="text" id="nome" name="nome" required>
+                            <label for="nome">Nome</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-wrap textarea-wrap">
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            <label for="mensagem">Mensagem</label>
+                        </div>
+                        <button type="submit" class="btn-3d">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="container my-5" id="politica-privacidade">
+                <div class="text-center mb-4">
+                    <h2 class="section-title">Política de Privacidade</h2>
+                    <p class="lead">
+                        Nós, da <strong>H3Q SYSTEMS - ME</strong>, inscrita no CNPJ <strong>XX.XXX.XXX/XXXX-XX</strong>, e com endereço Rua Assunção, S/N, Lote A Quadra 114, no bairro de Vilar dos Teles, São João de Meriti/RJ, doravante denominada apenas FIDELITY STORE, respeitamos seus dados pessoais e nos comprometemos a resguardar sua privacidade.
+                    </p>
+                    <p class="text-center">
+                        A <strong>FIDELITY STORE</strong> coleta seus dados pessoais de acordo com esta Política de Privacidade e em conformidade com as legislações de proteção de dados relevantes, em especial a Lei Geral de Proteção de Dados Pessoais <strong>(LGPD)</strong>.
+                    </p>
+                    <p class="text-center">
+                        Esta Política de Privacidade fornece as informações necessárias sobre seus direitos e obrigações e explica como, por que e quando tratamos seus dados pessoais.
+                    </p>
+                    <p class="text-center">
+                        Esta Política se aplica a todos os serviços disponibilizados pela <strong>FIDELITY STORE</strong> e o intuito deste documento é lhe esclarecer sobre a coleta, armazenamento e compartilhamento de seus dados.
+                    </p>
+                    <p class="text-center">
+                        Caso você necessite de qualquer informação, esclarecimento ou atendimento com relação a esta Política, pode entrar em contato conosco através do e-mail <strong>fidelitystoreadm@gmail.com</strong>.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                label: 'Taxa de Fidelização (%)',
+                data: [0, 15, 30, 45, 55, 68, 75, 82, 88],
+                borderColor: '#7396d2',
+                backgroundColor: '#124294',
+                fill: false,
+                tension: 0.4
+                }]
             },
-            grid: {
-              color: '#e9ecef'
+            options: {
+                responsive: true,
+                plugins: {
+                legend: {
+                    position: 'bottom'
+                },
+                title: {
+                    display: true,
+                    text: 'Taxa de Fidelização Mensal (Último Ano)',
+                    color: '#212529',
+                    font: {
+                    size: 18
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    bodyColor: '#000',
+                    borderColor: '#ccc',
+                    borderWidth: 1
+                }
+                },
+                scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                    color: '#6c757d'
+                    },
+                    grid: {
+                    color: '#e9ecef'
+                    }
+                },
+                x: {
+                    ticks: {
+                    color: '#6c757d'
+                    },
+                    grid: {
+                    color: '#e9ecef'
+                    }
+                }
+                }
             }
-          },
-          x: {
-            ticks: {
-              color: '#6c757d'
-            },
-            grid: {
-              color: '#e9ecef'
+            });
+        </script>
+
+        <script>
+            function gerarCoresOpostas(numCores) {
+                const cores = [];
+                for (let i = 0; i < numCores; i++) {
+                    const hue = (i * 360 / numCores) % 360;
+                    cores.push(`hsl(${hue}, 70%, 50%)`);
+                }
+                return cores;
             }
-          }
-        }
-      }
-    });
-  </script>
+            // Dados fictícios de vendas após fidelização (substitua pelos seus)
+            const dadosFidelizados = {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                valores: [15000, 18000, 22000, 20000, 25000, 28000, 30000, 27000, 32000, 35000, 33000, 38000]
+            };
 
-<script>
-  // Dados fictícios de vendas após fidelização (substitua pelos seus)
-  const dadosFidelizados = {
-    labels: ['João', 'Maria', 'Carlos', 'Ana'],
-    valores: [450, 320, 600, 280] // valores em R$
-  };
+            const ctxPizza = document.getElementById('graficoPizza').getContext('2d');
+            const graficoPizza = new Chart(ctxPizza, {
+                type: 'pie',
+                data: {
+                labels: dadosFidelizados.labels,
+                datasets: [{
+                    label: 'Vendas Mensais (R$)',
+                    data: dadosFidelizados.valores,
+                    // backgroundColor: gerarCoresOpostas(12),
+                    backgroundColor: [
+                        '#a88ff7',
+                        '#9a80e9',
+                        '#8c71db',
+                        '#7e62cd',
+                        '#7053bf',
+                        '#6244b1',
+                        '#5435a3',
+                        '#462695',
+                        '#381787',
+                        '#2a0879',
+                        '#1c006b',
+                        '#0e005d'
+                    ],
+                    hoverOffset: 10,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+                },
+                options: {
+                plugins: {
+                    title: {
+                    display: true,
+                    text: 'Vendas Mensais (R$)',
+                    color: '#212529',
+                    font: {
+                        size: 18
+                    }
+                    },
+                    legend: {
+                    position: 'bottom'
+                    },
+                    tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                        const valor = context.parsed;
+                        return `R$ ${valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
+                        }
+                    }
+                    }
+                }
+                }
+            });
+        </script>
 
-  const ctxPizza = document.getElementById('graficoPizza').getContext('2d');
-  const graficoPizza = new Chart(ctxPizza, {
-    type: 'pie',
-    data: {
-      labels: dadosFidelizados.labels,
-      datasets: [{
-        label: 'Vendas Pós-Fidelização (R$)',
-        data: dadosFidelizados.valores,
-        backgroundColor: ['#4CAF50', '#FF9800', '#2196F3', '#E91E63'],
-        borderColor: '#fff',
-        borderWidth: 2
-      }]
-    },
-    options: {
-      plugins: {
-        title: {
-          display: true,
-          text: 'Vendas em R$ após Fidelização por Cliente',
-          color: '#212529',
-          font: {
-            size: 18
-          }
-        },
-        legend: {
-          position: 'bottom'
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              const valor = context.parsed;
-              return `R$ ${valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
-            }
-          }
-        }
-      }
-    }
-  });
-</script>
+        <script>
+            const ctxFidelizacao = document.getElementById('fidelizacaoChart').getContext('2d');
 
+            const dadosMensais = {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                valores: [300, 250, 200, 210, 250, 350, 120, 190, 420, 400, 390, 500]
+            };
 
-<script>
-  const ctxFidelizacao = document.getElementById('fidelizacaoChart').getContext('2d');
+            new Chart(ctxFidelizacao, {
+                type: 'bar',
+                data: {
+                labels: dadosMensais.labels,
+                datasets: [{
+                    label: 'Pontos Resgatados',
+                    data: dadosMensais.valores,
+                    backgroundColor: '#1864e5',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                        return `R$ ${value.toLocaleString('pt-BR')}`;
+                        }
+                    }
+                    }
+                },
+                plugins: {
+                    title: {
+                    display: true,
+                    text: 'Pontos Resgatados por Mês',
+                    color: '#212529',
+                    font: { size: 18 }
+                    },
+                    legend: {
+                    display: false
+                    },
+                    tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                        return `R$ ${context.parsed.x.toLocaleString('pt-BR')}`;
+                        }
+                    }
+                    }
+                }
+                }
+            });
+        </script>
 
-  const dadosMensais = {
-    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril'],
-    valores: [1200, 950, 1450, 1100] // Vendas fidelizadas em R$
-  };
+        <footer>
+            <div class="social">
+                <a href="https://www.instagram.com/fidelitystoreapp/" target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/fidelity-store/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="contato">
+                <p>Telefone: +55 (21) 98787-0918</p>
+                <p>Endereço: Rio de Janeiro, RJ</p>
+            </div>
+        <div class="copyright">
+                © 2025 H3Q Systems. Todos os direitos reservados.
+            </div>
+        </footer>
 
-  new Chart(ctxFidelizacao, {
-    type: 'bar',
-    data: {
-      labels: dadosMensais.labels,
-      datasets: [{
-        label: 'Vendas Fidelizadas (R$)',
-        data: dadosMensais.valores,
-        backgroundColor: 'rgba(75, 192, 192, 0.7)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
-      }]
-    },
-    options: {
-      indexAxis: 'y', // isso faz o gráfico ser horizontal
-      scales: {
-        x: {
-          beginAtZero: true,
-          ticks: {
-            callback: function(value) {
-              return `R$ ${value.toLocaleString('pt-BR')}`;
-            }
-          }
-        }
-      },
-      plugins: {
-        title: {
-          display: true,
-          text: 'Vendas Fidelizadas por Mês',
-          color: '#212529',
-          font: { size: 18 }
-        },
-        legend: {
-          display: false
-        },
-        tooltip: {
-          callbacks: {
-            label: function(context) {
-              return `R$ ${context.parsed.x.toLocaleString('pt-BR')}`;
-            }
-          }
-        }
-      }
-    }
-  });
-</script>
-
-
-
-</body>
+        <script src="js/script.js"></script>
+    </body>
 </html>
