@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == 'develop'
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -24,9 +24,11 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
           source: "."
+          exclude: |
+            .git*
           target: "/var/www/html/fidelitystore-site"
 
-      - name: Build da aplicação
+      - name: Reiniciar servidor
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -34,6 +36,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: 22
           script: |
+            set -e
             # Navega para o diretório do projeto
             cd /var/www/html/fidelitystore-site
             
