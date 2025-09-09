@@ -190,6 +190,12 @@ main section h2 {
     margin-bottom: 20px;
 }
 
+.plano .preco sup {
+    font-size: 0.6em;
+    position: relative;
+    top: -0.5em;
+}
+
 .plano ul {
     list-style: none;
     padding: 0;
