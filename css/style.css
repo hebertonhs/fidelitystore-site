@@ -196,6 +196,31 @@ main section h2 {
     top: -0.5em;
 }
 
+.preco-oculto {
+    position: relative;
+    filter: blur(5px);
+    -webkit-filter: blur(5px); /* Compatibilidade com Safari */
+    position: relative; /* Necessário para o posicionamento do ::after */
+    cursor: help;
+    transition: filter 0.3s ease;
+    color: transparent; /* Oculta o texto original */
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5); /* Cria o efeito de desfoque no texto */
+}
+
+.preco-oculto::after {
+    content: 'consulte para condições especiais';
+    position: absolute;
+    top: 100%; /* Posiciona o texto abaixo do elemento do preço */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.4em;
+    color: #7c5dfa;
+    white-space: nowrap;
+    margin-top: 5px; /* Adiciona um pequeno espaço para não colar no preço */
+    margin-top: 8px; /* Adiciona um pequeno espaço para não colar no preço */
+    text-shadow: none; /* Garante que este texto não tenha o desfoque */
+}
+
 .plano ul {
     list-style: none;
     padding: 0;
