@@ -352,9 +352,9 @@ main section h2 {
     transform: translateY(3px);
 }
 
-/* Seção Política de Privacidade */
-#politica-privacidade {
-    background-color: #f2f2f9;
+/* Seção Termos e Política de Privacidade */
+#termos-e-politica {
+    background-color: #fff;
     text-align: left;
 }
 
@@ -415,8 +415,8 @@ body:hover {
     background-color: #f9f9f9;
 }
 
-#politica-privacidade:hover {
-    background-color: #e6e6f2;
+#termos-e-politica:hover {
+    background-color: #f9f9f9;
 }
 
 /* Design Responsivo */
