@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^index\.html$ https://limegreen-spoonbill-826132.hostingersite.com/home/ [R=301,L]
+RewriteRule ^$ https://limegreen-spoonbill-826132.hostingersite.com/home/ [R=301,L]
